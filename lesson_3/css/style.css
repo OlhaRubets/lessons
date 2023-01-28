@@ -1,0 +1,28 @@
+ @import url('reset.css'); 
+
+ 
+.title{
+    color: yellowgreen;
+}
+.lego p{
+    color: green;
+}
+.text +p{
+    color: blueviolet;   
+}
+.about >p{
+    color: red;
+}
+.text,
+.list{
+    color: blue;
+}
+h3{
+    color: aqua;
+}
+.about~div{
+    color: gray;
+}
+#start{
+    color: purple;
+}
