@@ -1,0 +1,79 @@
+ @import url('reset.css'); 
+ @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:regular,600,200italic&display=swap);
+ @font-face {
+    font-family: 'Tungsten Compressed';
+    src: url('../fonts/Tungsten-Book.woff2') format('woff2'),
+        url('../fonts/TungstenCompressed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tungsten Book';
+    src: url('../fonts/Tungsten-Book.woff2') format('woff2'),
+        url('../fonts/Tungsten-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body{
+    font-family:'Tungsten' "Arial" sans-serif;
+    font-size: 18px;
+    line-height: 111.111111%; /* 20/18 */
+    
+}
+span{
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    color: rgb(56, 113, 41);
+
+}
+h3{
+    font-family:"Source Code Pro", "Arial" sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    font-style: italic;
+    color: rgb(4, 4, 56);
+}
+
+#bigraphy,
+#career{
+    font-family: "Source code pro";
+    font-size: 30px;
+    text-shadow: 2px 2px 5px rgba(46, 33, 33, 0.501);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.title {
+    font-family: "Source Code Pro", Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(74, 49, 49, 0.632);
+    text-transform: uppercase;
+}
+
+p{
+    font-style: italic;
+    text-indent: 10px;
+    letter-spacing: 2px;
+    color: rgba(40, 29, 29, 0.712);  
+}
+.title-link{
+    font-family:"Source Code Pro", "Arial" sans-serif;
+    font-size: 24px;
+    text-decoration: underline;
+    text-transform: uppercase;}
+.list {
+    font-family:"Source Code Pro", "Arial" sans-serif;
+    text-decoration: underline;
+    color: rgba(5, 62, 62, 0.792);
+}
+.navigation{
+    text-align: right;
+}
