@@ -44,7 +44,7 @@ body{
 }
 .block-2 {
     font-family: "Inter", sans-serif;
-    background: #F4F7FF linear-gradient(124deg, rgba(244,247,255,1) 65%, rgba(228,234,251,1) 65%, rgba(232,235,251,0.9934567577030813) 69%, rgba(233,238,253,1) 71%, rgba(217,224,248,0.9038209033613446) 71%);
+    background: #F4F7FF linear-gradient(114deg, rgba(244,247,255,1) 65%, rgba(228,234,251,1) 65%, rgba(232,235,251,0.9934567577030813) 69%, rgba(217,224,248,0.9038209033613446) 71%, rgba(233,238,253,1) 71%);
 }
 .block-text2 {
     display: inline-block;
