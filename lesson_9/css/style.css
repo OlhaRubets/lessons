@@ -1,0 +1,125 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,500,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inter:500,600,700&display=swap);
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    color: black;
+    line-height: 1.7;
+}
+
+.main-container {
+    background-color: rgba(98, 98, 231, 0.886);
+    max-width: 1275pxpx;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title-icon{
+    font-size: 36px;
+    color: black;
+}
+.item-logo{
+    margin-bottom: 40px;
+
+}
+.icon{
+    text-align: center;
+    margin: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 5px;
+}
+.icon:not(:last-child){
+    margin-bottom: 20px;
+}
+.icon:hover{
+    box-shadow: 2px 2px 3px 3px blue;
+}
+.button{
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+.button-link{
+    margin: 10px;
+    display: inline-block;
+}
+.contacts{
+    padding-top: 40px;
+
+}
+.contacts-items{
+    margin: 10px;
+    display: inline-block;
+}
+.contacts-items:hover{
+    border: 2px solid black;
+}
+.contacts-items:not(:last-child){
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+    text-align: center;
+}
+h3{
+    font-size: 24px;
+}
+
+
+
+.block-design {
+    min-height: 500px;
+    background: url(../img/svg/design/decoration1.svg) 60% 10% no-repeat,
+    url(../img/svg/design/decoration2.svg) 70% 10% no-repeat,
+    url(../img/svg/design/dotted_green.svg) 80% 10% no-repeat,
+    url(../img/svg/design/dotted_large.svg) 90% 10% no-repeat,
+    url(../img/svg/design//dotted_white.svg) 100% 10% no-repeat,
+    url(../img/svg/design/ellipce.svg) 100% 30%  no-repeat,
+    url(../img/svg/design/Ellipse.svg) 90% 40% no-repeat,
+    url(../img/svg/design/green_oval.svg) 80% 40% no-repeat,
+    url(../img/svg/design/dotted_small.svg) 70% 40% no-repeat,
+    url(../img/svg/design/grou.svg) 60% 40% no-repeat,
+    url(../img/svg/design/oval.svg) 60% 70% no-repeat,
+    url(../img/svg/design/oval2.svg) 70% 70% no-repeat,
+    url(../img/svg/design/oval_blue.svg) 80% 70% no-repeat,
+    url(../img/svg/design/Vector.svg) 90% 70% no-repeat;
+    
+}   
+.item-design {
+    color: black;
+
+}
+
+p{
+    max-width: 400px;
+}
+.content-image {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+
+.items-image {
+    margin: 15px;
+}
+.customers{
+    font-size: 0;
+
+}
+.project {
+    font-size: 0;
+}
+.team {
+    font-size: 0;
+}
+.news {
+    font-size: 0;
+}
+img{
+    border-radius: 15px;
+}
