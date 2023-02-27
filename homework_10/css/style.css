@@ -36,6 +36,9 @@ body{
     font-size: 18px;
     line-height: 1.4;
 }
+.header__information{
+
+}
 .header__menu {
 }
 .header__menu-items {
@@ -119,7 +122,7 @@ body{
 .footer__address {
 }
 .footer__copyright {
-}*/
+}
 
 
 
