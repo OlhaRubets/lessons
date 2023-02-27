@@ -2,13 +2,124 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,500,500,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Inter:500,600,700&display=swap);
 
-
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
 [class*="__container"]{
     max-width: 1270px;
     margin: 0 auto;
     padding: 0 15px;
 
 }
+/*.header {
+}
+.header__container {
+}
+.logotype{
+    display: inline-block;
+    margin-top: 37px;
+    margin-right: 408px;
+}
+.logotype__logo {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #495057;
+
+}
+.logotype__point {
+    color: #DDBEA9;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.header__menu {
+}
+.header__menu-items {
+}
+.header__links {
+}
+.header__link {
+}
+.main {
+}
+.main__container {
+}
+.image {
+}
+.main__block {
+}
+.main__subtitle {
+}
+.main__title {
+}
+.main__title_white {
+}
+.main__slider {
+}
+.main__content {
+}
+.content-main {
+}
+.content-main__title {
+}
+.content-main__list {
+}
+.content-main__list-item {
+}
+.pictures {
+}
+.pictures__icons {
+}
+.pictures__picture-item {
+}
+.pictures__picture-date {
+}
+.pictures__picture-text {
+}
+.trending-content {
+}
+.trending-content__title {
+}
+.trending-content__card {
+}
+.trending-content__picture-item {
+}
+.trending-content__picture-date {
+}
+.trending-content__picture-date_white {
+}
+.trending-content__picture-text {
+}
+.trending-content__picture-text_white {
+}
+.footer {
+}
+.footer__container {
+}
+.footer__logo {
+}
+.footer__point {
+}
+.footer__about {
+}
+.footer__menu {
+}
+.footer__menu-items {
+}
+.footer__social {
+}
+.footer__links {
+}
+.footer__link {
+}
+.footer__address {
+}
+.footer__copyright {
+}*/
 
 
 
