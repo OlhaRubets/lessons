@@ -251,8 +251,8 @@ body {
 }
 .header__information-list {
 	vertical-align: middle;
-	display: inline-block;
 	margin-right: 30px;
+	display: inline-block;
 }
 .menu {
 	line-height: 1.2;
