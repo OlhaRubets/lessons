@@ -140,11 +140,8 @@ body {
 	transform: translate(0, 100px);
 	perspective: 400px;
 	perspective-origin: center;
-	
+}
 
-}
-.perspective__title {
-}
 .perspective__item {
 	width: 200px;
 	height: 200px;
@@ -237,13 +234,14 @@ body {
 	margin: 0 auto;
 	font-size: 40px;
 	text-align: center;
+	position: relative;
 }
 
 .car__bonnet {
 	display: inline-block;
-	position: relative;
-	top: 495px;
-	left: 210px;
+	position: absolute;
+	top: 690px;
+	left: 280px;
 	width: 250px;
 	height: 200px;
 	background-color: rgb(225, 104, 104);
@@ -252,11 +250,11 @@ body {
 	border: 2px solid black;
 }
 .car__headlight {
-	position: relative;
-	top: 0;
-	left: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 	display: inline-block;
-	transform: translate(-50px, 420px);
+	transform: translate(280px, 780px);
 	width: 60px;
 	height: 30px;
 	background-color: rgb(230, 242, 7);
@@ -269,9 +267,9 @@ body {
 }
 .car__front-door {
 	display: inline-block;
-	position: relative;
-	top: 495px;
-	left:130px;
+	position: absolute;
+	top: 690px;
+	left:530px;
 	width: 200px;
 	height: 200px;
 	background-color: rgb(225, 104, 104);
@@ -280,9 +278,9 @@ body {
 }
 .car__front-wheel {
 	display: inline-block;
-	position: relative;
-	top: 550px;
-	right:160px;
+	position: absolute;
+	top: 810px;
+	right:830px;
 	width: 150px;
 	height: 150px;
 	background-color: rgb(6, 6, 6);
@@ -296,9 +294,9 @@ body {
 }
 [class*="__tire"] {
 	display: inline-block;
-	position: relative;
+	position: absolute;
 	top: 21px;
-	right:0px;
+	right:17px;
 	width: 100px;
 	height: 100px;
 	background-color: rgb(183, 178, 178);
@@ -308,7 +306,7 @@ body {
 }
 .car__front-wing-screen {
 	display: inline-block;
-	transform: translate(-290px, 295px);
+	transform: translate(40px, 295px);
 	width: 250px;
 	height: 200px;
 	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
@@ -318,7 +316,7 @@ body {
 }
 .car__back-wing-screen {
 	display: inline-block;
-	transform: translate(-300px, 295px);
+	transform: translate(30px, 295px);
 	width: 250px;
 	height: 200px;
 	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
@@ -328,9 +326,9 @@ body {
 }
 .car__back-door {
 	display: inline-block;
-	position: relative;
-	top: 250px;
-	left: 400px;
+	position: absolute;
+	top: 690px;
+	left: 730px;
 	width: 200px;
 	height: 200px;
 	background-color: rgb(225, 104, 104);
@@ -339,9 +337,9 @@ body {
 }
 .car__back-wheel {
 	display: inline-block;
-	position: relative;
-	top: 310px;
-	left: 350px;
+	position: absolute;
+	top: 810px;
+	left: 950px;
 	width: 150px;
 	height: 150px;
 	background-color: rgb(6, 6, 6);
@@ -355,9 +353,9 @@ body {
 }
 .car__boot {
 	display: inline-block;
-	position: relative;
-	top: 250px;
-	left: 230px;
+	position: absolute;
+	top: 690px;
+	left: 930px;
 	width: 250px;
 	height: 200px;
 	background-color: rgb(225, 104, 104);
@@ -366,9 +364,9 @@ body {
 	border: 2px solid black;
 }
 .car__stop-headlight {
-	position: relative;
-	top: 0;
-	left: 0;
+	position: absolute;
+	top: 600px;
+	left: 960px;
 	display: inline-block;
 	transform: translate(160px, 170px);
 	width: 60px;
