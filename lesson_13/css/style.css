@@ -1,0 +1,367 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Inter:500,600,700&display=swap);
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	
+}
+body {
+	font-family: "Inter", sans-serif;
+	font-weight: 600;
+	line-height: 1.5;
+	background-color: #ede47b;
+}
+[class*="__container"]{
+	max-width: 1270px;
+	margin: 0 auto;
+	padding-right: 10px;
+	padding-left: 10px;
+	
+}
+
+
+/*===================================*/
+
+.animation{
+	background: url(../img/road.webp) 0 0/cover no-repeat;
+	width: 100%;
+	height: 1000px;
+	padding-bottom: 50px;
+	position: relative;
+	
+}
+.animation__sunset {
+	position: relative;
+}
+
+.sunset {
+	
+}
+.sunset__clouds {
+	display: inline-block;
+	transform-origin: top;
+}
+.sunset__cloud-right {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 300px;
+	height: 400px;
+	animation: clouds 4.8s infinite ease-in-out alternate;
+	
+}
+.sunset__cloud-left {
+	position: absolute;
+	top: 50px;
+	left: 300px;
+	width: 300px;
+	height: 300px;
+	animation: clouds 5s infinite ease-in-out alternate;
+}
+@keyframes clouds {
+	0%{
+		transform: rotate(-10deg);
+	}
+	100%{
+		transform: rotate(10deg);
+	}
+	
+}
+.sunset__sun {
+	position: absolute;
+	top: 60px;
+	right: 100px;
+	width: 200px;
+	height:200px;
+	background-color: yellow;
+	border-radius: 50%;
+	outline: 15px dashed yellow;
+	animation: sunshine 5s linear infinite;
+}
+@keyframes sunshine {
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+	
+}
+.animation__sign{
+	position: absolute;
+	top: 650px;
+	left: 200px;
+	width: 80px;
+	height: 100px;
+	opacity: 0;
+	animation: stop 2s linear 14s 1  forwards;
+
+}
+@keyframes stop {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+	
+}
+.car {
+	
+	padding-top: 150px;
+	padding-right: 50px;
+	margin: 0 auto;
+	font-size: 40px;
+	text-align: center;
+	position: relative;
+	animation: car-ride 5s 3 reverse ;
+}
+
+.car__bonnet {
+	display: inline-block;
+	position: absolute;
+	top: 690px;
+	left: 280px;
+	width: 250px;
+	height: 200px;
+	background-color: rgb(225, 104, 104);
+	border-radius: 45% 0  0 45%;
+	z-index: 8;
+	border: 2px solid black;
+}
+.car__headlight {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: inline-block;
+	transform: translate(280px, 780px);
+	width: 60px;
+	height: 30px;
+	background-color: rgb(230, 242, 7);
+	border-radius: 35% 0  0 35%;
+	z-index: 9;
+	border: 2px solid black;
+	
+}
+.car__beam{
+	position: absolute;
+	top:-80px;
+	right: 50px;	
+	height: 0px;
+	width: 0;
+	border-top: 90px solid transparent;
+	border-right: 400px solid #ebff09;
+	border-bottom: 90px solid  transparent;
+	transform: rotate(180deg);
+	opacity: 0;
+	transition: opacity 0.3s ;
+	
+}
+.car__beam {
+	content: "";
+	opacity: 0.7;
+	animation: beam  ease  normal 20s forwards;
+	
+}
+@keyframes beam {
+	0%{
+		opacity: 0;
+	}
+	30%{
+		opacity: 0;
+	}
+
+	70%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 0.7;
+	}
+}
+.car__front-door {
+	display: inline-block;
+	position: absolute;
+	top: 690px;
+	left:530px;
+	width: 200px;
+	height: 200px;
+	background-color: rgb(225, 104, 104);
+	z-index: 8;
+	border: 2px solid black;
+}
+.car__front-wheel {
+	display: inline-block;
+	position: absolute;
+	top: 810px;
+	right:830px;
+	width: 150px;
+	height: 150px;
+	background-color: rgb(6, 6, 6);
+	z-index: 8;
+	border: 5px dashed rgb(124, 123, 123);
+	border-radius: 50%;
+}
+.wheels{
+	animation: wheels 3s 5;
+}
+@keyframes wheels{
+	0%{
+		transform: rotate(0);
+	}
+	30%{
+		transform: rotate(90deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+	
+}
+[class*="__tire"] {
+	display: inline-block;
+	position: absolute;
+	top: 21px;
+	right:17px;
+	width: 100px;
+	height: 100px;
+	background-color: rgb(183, 178, 178);
+	z-index: 9;
+	border: 3px solid black;
+	border-radius: 50%;
+}
+.car__front-wing-screen {
+	display: inline-block;
+	position: absolute;
+	transform: translate(-220px, 340px);
+	width: 250px;
+	height: 200px;
+	border-radius: 150% 0 0 0;
+	z-index: 10;
+	border: 15px solid rgb(225, 104, 104);
+	overflow: hidden;
+}
+
+.car__front-wing-screen::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	border-radius: 150% 0 0 0;
+	transform: translate(0, 0);
+	animation: window 3s ease normal forwards ;
+	animation-delay: 17s;
+}
+@keyframes window{
+	0%{
+		transform: translate(0, 0);
+
+	}
+	
+	50%{
+		transform: translate(0, 50%);
+	}
+	100%{
+		transform: translate(0, 100%);
+	}
+}
+
+.image{
+	width: 100%;
+	display:block;
+	position: relative;
+	top:25px;
+	left: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: -1;
+}
+.car__back-wing-screen {
+	display: inline-block;
+	position: absolute;
+	transform: translate(30px, 340px);
+	width: 250px;
+	height: 200px;
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	border-radius: 0 150% 0 0;
+	z-index: 8;
+	border: 15px solid rgb(225, 104, 104);
+}
+.car__back-door {
+	display: inline-block;
+	position: absolute;
+	top: 690px;
+	left: 730px;
+	width: 200px;
+	height: 200px;
+	background-color: rgb(225, 104, 104);
+	z-index: 8;
+	border: 2px solid black;
+}
+.car__back-wheel {
+	display: inline-block;
+	position: absolute;
+	top: 810px;
+	left: 950px;
+	width: 150px;
+	height: 150px;
+	background-color: rgb(6, 6, 6);
+	z-index: 9;
+	border: 5px dashed rgb(124, 123, 123);
+	border-radius: 50%;
+}
+
+.car__boot {
+	display: inline-block;
+	position: absolute;
+	top: 690px;
+	left: 930px;
+	width: 250px;
+	height: 200px;
+	background-color: rgb(225, 104, 104);
+	border-radius: 0 30% 0 0;
+	z-index: 8;
+	border: 2px solid black;
+}
+.car__stop-headlight {
+	position: absolute;
+	top: 600px;
+	left: 960px;
+	display: inline-block;
+	transform: translate(160px, 170px);
+	width: 60px;
+	height: 30px;
+	background-color: rgb(242, 7, 7);
+	z-index: 10;
+	border: 2px solid black;
+}
+.car__stop-headlight:hover::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-block;
+	width: 120%;
+	height: 120%;
+	background-color: rgba(220, 86, 86, 0.356);
+}
+.car__stop-headlight:hover{
+	
+}
+@keyframes car-ride {
+	0%{
+		transform: translate(-100%, 0);
+
+	}
+	30%{
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	100%{
+		transform: translate(2000px, 0);
+		opacity: 0;
+
+	}
+}
