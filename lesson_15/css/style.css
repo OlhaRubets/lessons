@@ -25,7 +25,7 @@ body {
 /*===================================*/
 
 .main__block {
-	padding: 100px 0;
+	margin: 100px 0;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -52,6 +52,7 @@ body {
 
 .card-block {
 	display: flex;
+	justify-content: space-between;
 }
 
 .card-block__link{
@@ -62,7 +63,7 @@ body {
 	transform: scale(1.03);
 }
 .card-block__image {
-	flex: 0 0 72.1666667%;
+	flex: 0 1 72.1666667%;
 	padding-right: 10px;
 	overflow: hidden;
 }
@@ -70,11 +71,10 @@ body {
 	max-width: 100%;
 }
 .text {
-	display: flex;
-	flex-direction: column;
+	align-self: center;
 	flex: 0 0 27.8333333%;
 	justify-content: center;
-	gap: 20px;
+	
 	
 }
 .text__title {
@@ -82,6 +82,7 @@ body {
 	font-size: 24px;
 	line-height: 1.4;
 	color: #333333;
+	padding-bottom: 20px;
 }
 /*===========================*/
 .main__minimalist {
@@ -99,15 +100,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	padding: 100px 0;
+	margin: 100px 0;
 
 }
 .minimalist__caption {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 45px;
+	max-width: 1200px;
+	margin: 0 auto;
+	
 	
 }
 .minimalist__title {
@@ -116,13 +115,14 @@ body {
 	font-size: 56px;
 	line-height: 1.4;
 	color: #000000;
-	
+	margin-bottom: 40px;
 }
 .minimalist__subtitle {
 	max-width: 520px;
 	margin: 0 auto;
 	text-align: center;
 	color: #000000;
+	margin-bottom: 53px;
 }
 .minimalist__picture img {
 	max-width: 100%;
@@ -180,11 +180,12 @@ body {
 .design__heading {
 }
 .design__paragraph{
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
+	
+
 }
-.design__text {
+.design__text:not(:last-child) {
+	padding-bottom: 25px;
+
 }
 .minimalist__catalog {
 	display: flex;
@@ -195,4 +196,8 @@ body {
 }
 .minimalist__catalog img{
 	max-width: 100%;
+}
+.catalog__img{
+	
+	max-width: 584px;
 }
