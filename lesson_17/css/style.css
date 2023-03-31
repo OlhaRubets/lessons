@@ -415,13 +415,6 @@ body {
 span{
 	color: #EB5757;
 }
-
-
-
-.shipping__login {
-}
-.login {
-}
 .login__select{
 	border: 1px solid #C4C4C4;
 	width: 100%;
@@ -432,16 +425,7 @@ span{
 	color: #3F3F3F;
 	border-radius: 7px;
 }
-.login__label {
-}
-.login__state {
 
-	
-}
-.shipping__methods {
-}
-.method {
-}
 .method__title {
 	font-family: "Oswald", sans-serif;
 	font-size: 24px;
