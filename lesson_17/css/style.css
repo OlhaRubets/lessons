@@ -664,4 +664,13 @@ input{
 		padding: 12px 22px;
 		margin-bottom: 20px;
 	}
+	.content__button {
+		width: 100%;
+	}
+	.order{
+		padding: 0 10px;
+	}
+	.order__submit {
+		width: 100%;
+	}
 	}
