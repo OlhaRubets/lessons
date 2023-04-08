@@ -557,15 +557,15 @@ body {
 
 }
 @media (any-hover: hover){
-	.image__link img:hover{
+	.card__link img:hover{
 		transform: scale(1.05);
 	}
 	
-	.date__link:hover{
+	.text__link:hover{
 		text-decoration: underline;
 		color:#DDBEA9
 	}
-	.tittle__link:hover{
+	.text__tittle:hover{
 		text-decoration: underline;
 	}
 	.author__link:hover{
