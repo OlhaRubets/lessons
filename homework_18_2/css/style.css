@@ -388,9 +388,15 @@ body{
 	justify-content: flex-end;
 }
 
-.social__link,
-.info__link,
-.content__author,
+.info__link{
+    color: rgba(248, 249, 250, 0.5);
+	transition: color 0.3s;
+}
+.content__author{
+    color: rgba(248, 249, 250, 0.5);
+	transition: color 0.3s;
+}
+
 .address__link  {
 	color: rgba(248, 249, 250, 0.5);
 	transition: color 0.3s;
