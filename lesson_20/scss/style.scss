@@ -1,0 +1,398 @@
+@use "sass:math";
+
+@import "_reset.scss";
+@import "_common.scss";
+
+body {
+}
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+}
+
+// SASS Назва препроцесора
+// SCSS Це варіант синтаксису препроцесора SASS
+
+// Синтаксис SASS
+/*
+body
+	color:red
+	background: url('img/...') 0 0 no-repeat
+	font-size: 14px
+
+.block
+	color: green
+	margin-bottom:20px
+*/
+// Синтаксис SСSS
+/*
+body {
+	color: red;
+	background: url("img/...") 0 0 no-repeat;
+	font-size: 14px;
+}
+.block {
+	color: green;
+	margin-bottom: 20px;
+}
+*/
+
+// Супер сила №1
+// Коментарі
+
+/* я потраплю в CSS */
+// я не потраплю в CSS
+
+// Супер сила №2*
+// Змінні
+// * CSS теж має можливість використовувати змінні
+
+$mainColor: #333;
+
+body {
+	background-color: $mainColor;
+}
+.block {
+	color: $mainColor;
+}
+
+// Супер сила №3
+// Вкладеність
+
+// Синтаксис CSS
+//.text{
+// color: blue;
+//}
+//.text span {
+//	color: green;
+//}
+
+// Синтаксис SCSS
+/*
+.text {
+	color: blue;
+	span {
+		color: green;
+	}
+}
+*/
+
+// CSS
+.block {
+}
+.block__container {
+}
+.block__title {
+}
+.block__body {
+}
+.block__image {
+}
+.block__content {
+}
+
+// SCSS
+// & - це амперсанд (and)
+.block {
+	// .block__container
+	&__container {
+	}
+	// .block__title
+	&__title {
+		@media (max-width: 767.98px) {
+		}
+	}
+	// .block__body
+	&__body {
+		@media (max-width: 767.98px) {
+		}
+	}
+	// .block__image
+	&__image {
+		@media (max-width: 767.98px) {
+		}
+	}
+	// .block__content
+	&__content {
+		@media (max-width: 767.98px) {
+		}
+	}
+	// При наведенні на .block звертаємось до .block__image
+	&:hover {
+		.block__image {
+		}
+	}
+}
+@media (max-width: 767.98px) {
+	.block__title {
+	}
+	.block__body {
+	}
+	.block__image {
+	}
+}
+
+// АБО
+.block {
+	// .block__container
+	.block__container {
+	}
+	// .block__title
+	.block__title {
+	}
+	// .block__body
+	.block__body {
+	}
+	// .block__image
+	.block__image {
+	}
+	// .block__content
+	.block__content {
+	}
+}
+
+// Вкладеність псевдоелементів, псевдокласів і т.д.
+// CSS
+/*
+.text::before {
+}
+*/
+// SCSS
+/*
+.text {
+	&::before {
+	}
+	&:hover {
+	}
+	&:first-child {
+	}
+	&:not(:last-child) {
+	}
+}
+.text {
+	&:hover {
+		.block {
+			display: block;
+		}
+	}
+}
+*/
+// Клас з класом
+// CSS
+// .text.block{}
+
+// SCSS
+/*
+.text {
+	&.block {
+		color: red;
+	}
+}
+*/
+
+// Медіазапити
+// CSS
+/*
+.text {
+	font-size: 20px;
+}
+@media (max-width: 767.98px) {
+	.text {
+		font-size: 18px;
+	}
+}
+*/
+// SCSS
+/*
+.text {
+	font-size: 20px;
+	@media (max-width: 991.98px) {
+		font-size: 18px;
+	}
+	@media (max-width: 767.98px) {
+		font-size: 18px;
+	}
+	@media (any-hover: hover){
+		&:hover{
+			
+		}
+	}
+}
+*/
+
+// Супер сила №4
+// @extend
+// Перевикористання коду, використання шаблону коду
+/*
+.link {
+	color: red;
+	font-size: 18px;
+	// ....
+	// ....
+}
+// Перевикористання вже існуючого коду
+.text {
+	@extend .link;
+	font-size: 20px;
+	max-width: 500px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	background: url("img/") 0 0 no-repeat;
+}
+*/
+
+// Використання шаблону коду
+/*
+%link {
+	color: red;
+	font-size: 18px;
+}
+
+.text {
+	@extend %link;
+	font-size: 20px;
+	max-width: 500px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	background: url("img/") 0 0 no-repeat;
+}
+.block{
+	@extend %link;
+}
+*/
+
+// Супер сила №5
+// @mixin та @include
+// Міксіни
+
+// Створюємо
+@mixin box($boxBgColor: green, $boxBorderColor: red) {
+	width: 500px;
+	height: 500px;
+	background-color: $boxBgColor;
+	border: 1px solid $boxBorderColor;
+}
+// Підключаємо
+.text {
+	@include box;
+}
+.block {
+	@include box(red, green);
+}
+
+.link {
+	@include box(yellow, blue);
+}
+
+// Функція
+// Створюємо
+@function percent($num1, $num2) {
+	$rez: math.div($num1, $num2) * 100%;
+	@return $rez;
+}
+// Використовуємо
+.test {
+	width: percent(600, 900);
+}
+.test_2 {
+	width: percent(1000, 1200);
+}
+
+// Супер сила №6*
+// Оператори
+// Вверху файл обов'язково треба додати @use "sass:math";
+// * CSS теж має можливість використання операторів (calc)
+
+// Бфльше інформації
+// https://sass-lang.com/documentation/operators/string
+
+// Множення *
+// Додавання +
+// Віднімання -
+// Ділення math.div(num 1, num 2)
+/*
+.text {
+	width: math.div(600px, 960px) * 100%;
+	width: 100px - 50px;
+}
+*/
+
+// Інші можливості
+// @if / @else - умовне вітвлення
+// @for - цликл
+
+// Та багато іншого https://sass-lang.com/documentation
+
+.page {
+	padding: 50px;
+}
+
+// Приклад
+// CSS
+/*
+.list {
+	color: #fff;
+}
+.list__item {
+	font-size: 20px;
+	transform: translate(-100%, 0px);
+	animation: show-items 1s ease forwards;
+}
+.list__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.list__item:nth-child(1) {
+	animation-delay: 0s;
+}
+.list__item:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.list__item:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.list__item:nth-child(4) {
+	animation-delay: 0.3s;
+}
+.list__item:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+*/
+// SCSS
+.list {
+	color: #fff;
+	// .list__item
+	&__item {
+		font-size: 20px;
+		transform: translate(-100%, 0px);
+		animation: show-items 1s ease forwards;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		@for $i from 1 through 5 {
+			&:nth-child(#{$i}) {
+				$delay: ($i - 1) * 0.1;
+				animation-delay: #{$delay}s;
+			}
+		}
+	}
+}
+
+@keyframes show-items {
+	0% {
+		transform: translate(-100%, 0px);
+	}
+	100% {
+		transform: translate(0, 0px);
+	}
+}

@@ -1,0 +1,327 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+textarea,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/*
+body
+	color:red
+	background: url('img/...') 0 0 no-repeat
+	font-size: 14px
+
+.block
+	color: green
+	margin-bottom:20px
+*/
+/*
+body {
+	color: red;
+	background: url("img/...") 0 0 no-repeat;
+	font-size: 14px;
+}
+.block {
+	color: green;
+	margin-bottom: 20px;
+}
+*/
+/* я потраплю в CSS */
+body {
+  background-color: #333;
+}
+
+.block {
+  color: #333;
+}
+
+/*
+.text {
+	color: blue;
+	span {
+		color: green;
+	}
+}
+*/
+/*
+.text::before {
+}
+*/
+/*
+.text {
+	&::before {
+	}
+	&:hover {
+	}
+	&:first-child {
+	}
+	&:not(:last-child) {
+	}
+}
+.text {
+	&:hover {
+		.block {
+			display: block;
+		}
+	}
+}
+*/
+/*
+.text {
+	&.block {
+		color: red;
+	}
+}
+*/
+/*
+.text {
+	font-size: 20px;
+}
+@media (max-width: 767.98px) {
+	.text {
+		font-size: 18px;
+	}
+}
+*/
+/*
+.text {
+	font-size: 20px;
+	@media (max-width: 991.98px) {
+		font-size: 18px;
+	}
+	@media (max-width: 767.98px) {
+		font-size: 18px;
+	}
+	@media (any-hover: hover){
+		&:hover{
+
+		}
+	}
+}
+*/
+/*
+.link {
+	color: red;
+	font-size: 18px;
+	// ....
+	// ....
+}
+// Перевикористання вже існуючого коду
+.text {
+	@extend .link;
+	font-size: 20px;
+	max-width: 500px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	background: url("img/") 0 0 no-repeat;
+}
+*/
+/*
+%link {
+	color: red;
+	font-size: 18px;
+}
+
+.text {
+	@extend %link;
+	font-size: 20px;
+	max-width: 500px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	background: url("img/") 0 0 no-repeat;
+}
+.block{
+	@extend %link;
+}
+*/
+.text {
+  width: 500px;
+  height: 500px;
+  background-color: green;
+  border: 1px solid red;
+}
+
+.block {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  border: 1px solid green;
+}
+
+.link {
+  width: 500px;
+  height: 500px;
+  background-color: yellow;
+  border: 1px solid blue;
+}
+
+.test {
+  width: 66.6666666667%;
+}
+
+.test_2 {
+  width: 83.3333333333%;
+}
+
+/*
+.text {
+	width: math.div(600px, 960px) * 100%;
+	width: 100px - 50px;
+}
+*/
+.page {
+  padding: 50px;
+}
+
+/*
+.list {
+	color: #fff;
+}
+.list__item {
+	font-size: 20px;
+	transform: translate(-100%, 0px);
+	animation: show-items 1s ease forwards;
+}
+.list__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.list__item:nth-child(1) {
+	animation-delay: 0s;
+}
+.list__item:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.list__item:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.list__item:nth-child(4) {
+	animation-delay: 0.3s;
+}
+.list__item:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+*/
+.list {
+  color: #fff;
+}
+.list__item {
+  font-size: 20px;
+  -webkit-transform: translate(-100%, 0px);
+      -ms-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+  -webkit-animation: show-items 1s ease forwards;
+          animation: show-items 1s ease forwards;
+}
+.list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.list__item:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.list__item:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.list__item:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.list__item:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.list__item:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes show-items {
+  0% {
+    -webkit-transform: translate(-100%, 0px);
+            transform: translate(-100%, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes show-items {
+  0% {
+    -webkit-transform: translate(-100%, 0px);
+            transform: translate(-100%, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
